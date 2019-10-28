@@ -1,1 +1,1 @@
-web: concurrently \"npm run server\" \"npm start --prefix frontend\"
+web: npm start
