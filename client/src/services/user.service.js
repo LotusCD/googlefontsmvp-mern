@@ -18,7 +18,7 @@ function login(email, password) {
         
     };
     console.log("Body" + requestOptions.body)
-    return fetch('http://localhost:5000/api/users/login', requestOptions)
+    return fetch('/api/users/login', requestOptions)
         .then(response => {
             if (!response.ok) { 
                 return Promise.reject(response.statusText);
@@ -48,7 +48,7 @@ function getAll() {
         headers: authHeader()
     };
 
-    return fetch('http://localhost:5000/api/users/', requestOptions).then(handleResponse);
+    return fetch('/api/users/', requestOptions).then(handleResponse);
 }
 
 function getById(id) {
@@ -57,7 +57,7 @@ function getById(id) {
         headers: authHeader()
     };
 
-    return fetch('http://localhost:5000/api/users/' + id, requestOptions).then(handleResponse);
+    return fetch('/api/users/' + id, requestOptions).then(handleResponse);
 }
 
 function register(user) {
@@ -67,7 +67,7 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch('http://localhost:5000/api/users/register', requestOptions).then(handleResponse);
+    return fetch('/api/users/register', requestOptions).then(handleResponse);
 }
 
 function update(user) {
