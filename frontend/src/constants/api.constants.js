@@ -1,0 +1,8 @@
+export const apiConstants = {
+    FETCH_GOOGLE_API: 'FETCH_GOOGLE_API',
+    TYPED_FONT: 'TYPED_FONT',
+    SEARCH_FONT: 'SEARCH_FONT',
+    SUCCESS: 'SUCCESS',
+    ERROR: 'ERROR',
+    CLEAR: 'CLEAR'
+};
