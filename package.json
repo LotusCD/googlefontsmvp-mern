@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "Mern Auth Example",
   "main": "server.js",
-  "cacheDirectories": ["frontend/node_modules"] ,
+  "cacheDirectories": ["client/node_modules"] ,
   "scripts": {
-    "postinstall": "cd frontend && npm install && npm run build",
-    "start": "concurrently \"npm run server\" \"npm start --prefix frontend\"",
+    "postinstall": "cd client && npm install && npm run build",
+    "start": "concurrently \"npm run server\" \"npm start --prefix client\"",
     "server": "node server.js",
     "nodemonserver": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm start --prefix frontend\"",
-    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "dev": "concurrently \"npm run server\" \"npm start --prefix client\"",
+    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "engines": {
     "node": "~10.16.3",
