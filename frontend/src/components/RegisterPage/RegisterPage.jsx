@@ -78,6 +78,9 @@ class RegisterPage extends React.Component {
                         {submitted && !user.password &&
                             <div className="help-block">Password is required</div>
                         }
+                        {submitted && user.password < 6 &&
+                            <div className="help-block">Password requires more than 6 characters</div>
+                        }
                     </div>
                     <div className="form-group">
                         <button className="btn btn-primary">Register</button>
