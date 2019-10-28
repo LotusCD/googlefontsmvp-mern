@@ -14,7 +14,7 @@ export const fetchData = (data) => {
   
 export const fetchGoogleApi = () => {
     return (dispatch) => {
-      return axios.get("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAvocOLhfKzfe38CKqgjMf20y6WQUFI9Jc")
+      return axios.get("https://www.googleapis.com/webfonts/v1/webfonts?key=YOURAPI")
         .then(response => {
           dispatch(fetchData(response.data.items))
           //console.log("Action triggered " + response.data.items)
