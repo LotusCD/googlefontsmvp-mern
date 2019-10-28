@@ -43,4 +43,13 @@ app.use("/api/users", users);
 const port = process.env.PORT || 5000;
 const host = process.env.HOST || '0.0.0.0';
 
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'frontend/build')));
+// Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+  });
+}
+
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
