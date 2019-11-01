@@ -8,7 +8,7 @@
 
 4. Go to config/keys.js and modify the ‘mongoURI’ variable with your mongo atlas user/password or else with your Mongo localhost.
 
-5. To enable the google API, go to client/src/actions/index.js and modify the axios link with you Google API key.
+5. To enable the google API, go to client/src/actions/index.js and modify the axios link with your Google API key.
 
 Back-end
 
