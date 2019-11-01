@@ -5,8 +5,6 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -33,7 +31,10 @@ class TheNavBar extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onSearch = this.onSearch.bind(this);
-
+    this.onSmallSize = this.onSmallSize.bind(this);
+    this.onMediumSize = this.onMediumSize.bind(this);
+    this.onBigSize = this.onBigSize.bind(this);
+    this.onExtraSize = this.onExtraSize.bind(this);
   }
   
   toggle() {
@@ -49,6 +50,26 @@ class TheNavBar extends React.Component {
   onSearch = e => {
     this.props.actions.searchFont(e.target.value)
   };
+
+  onSmallSize = e => {
+    this.props.actions.smallSize(e.target.value)
+  };
+
+  onMediumSize = e => {
+    this.props.actions.mediumSize(e.target.value)
+  };
+  
+  onBigSize = e => {
+    this.props.actions.bigSize(e.target.value)
+  };
+
+  onExtraSize = e => {
+    this.props.actions.extraSize(e.target.value)
+  };
+
+  onRefresh = () => {
+    window.location.reload();
+  }
 
 
   render() {
@@ -109,15 +130,21 @@ class TheNavBar extends React.Component {
                   Options
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>
+                  <DropdownItem onClick={this.onRefresh}>
                     Reset
+                  </DropdownItem>
+                  <DropdownItem onClick={this.onSmallSize}>
+                    Small Size
+                  </DropdownItem>
+                  <DropdownItem onClick={this.onMediumSize}>
+                    Medium Size
+                  </DropdownItem>
+                  <DropdownItem onClick={this.onBigSize}>
+                    Large Size
+                  </DropdownItem>
+                  <DropdownItem onClick={this.onExtraSize}>
+                    Extra Size
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

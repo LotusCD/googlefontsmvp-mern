@@ -4,7 +4,7 @@ import GoogleFontLoader from 'react-google-font-loader';
 
 import './css/parent.css'
 
-const Fonts = ({ family, values}) => (
+const Fonts = ({ family, values, fontSizes}) => (
  
       
     <div>
@@ -18,11 +18,12 @@ const Fonts = ({ family, values}) => (
     />
     <div className="square">
       {family}
-      <p>Write something!</p>
+      <p>Write something!</p>    
+      <p>Writing Sample: [{fontSizes}]</p>
       
-      Writing Sample:
-      <br/><br/>
-      <p style={{ fontFamily: Object.values({family}).join(',') }}>{values}</p>
+      <br/>
+      {console.log("THIS IS TEEXXT Stringifys22 "+ JSON.stringify(fontSizes))}
+      <p style={{ fontFamily: Object.values({family}).join(','), fontSize: fontSizes}}>{values}</p>
       </div>
     </div>
  

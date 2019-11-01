@@ -74,12 +74,9 @@ class RegisterPage extends React.Component {
                     </div>
                     <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>
                         <label htmlFor="password">Password</label>
-                        <input type="password" className="form-control" name="password" value={user.password} onChange={this.handleChange} />
+                        <input type="password" className="form-control" name="password" value={user.password} onChange={this.handleChange} placeholder="Input a password with 6 or more characters"/>
                         {submitted && !user.password &&
                             <div className="help-block">Password is required</div>
-                        }
-                        {submitted && user.password < 6 &&
-                            <div className="help-block">Password requires more than 6 characters.</div>
                         }
                     </div>
                     <div className="form-group">

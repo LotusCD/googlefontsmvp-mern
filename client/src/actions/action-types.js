@@ -7,3 +7,10 @@ export const SEARCH_FONT='SEARCH_FONT';
 export const SUCCESS = "SUCCESS";
 export const ERROR = "ERROR";
 export const CLEAR = "CLEAR";
+
+//
+
+export const SMALL_SIZE = 'SMALL_SIZE';
+export const MEDIUM_SIZE = 'MEDIUM_SIZE';
+export const BIG_SIZE = 'BIG_SIZE';
+export const EXTRA_SIZE = 'EXTRA_SIZE';

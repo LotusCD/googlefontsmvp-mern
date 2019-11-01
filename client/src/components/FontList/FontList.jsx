@@ -11,10 +11,10 @@ import './css/parent.css'
 
 
 
-const FontList = ({ data, text, font, user }) => (
+const FontList = ({ data, text, font, user, msize }) => (
   
     <div className="parent">     
-      {console.log("THIS IS TEEXXT Stringify "+ JSON.stringify(user))}
+      {console.log("THIS IS TEEXXT Stringifys "+ JSON.stringify(msize))}
       {data
       .filter(({ family }) =>
         `${family}`
@@ -23,7 +23,7 @@ const FontList = ({ data, text, font, user }) => (
       )
 
       .map(({ id, family, category }) => (
-              <Fonts key={id} family={family} category={category} values={text} test={user} />   
+              <Fonts key={id} family={family} category={category} values={text} test={user} fontSizes = {msize} />   
       ))}
     </div>
   );
@@ -33,7 +33,8 @@ const mapStateToProps = state => {
     data: state.data,
     text: state.writeReducer.text,
     font: state.searchReducer.font,
-    user: state.users.user
+    user: state.users.user,
+    msize: state.fontSizesReducer.msize
   };
 };
 
